@@ -1,0 +1,196 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:vue/vue3-essential",
+    "@vue/standard",
+    "@vue/typescript/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "vue",
+    "sort-imports-es6-autofix"
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "/.quasar",
+    "/dist",
+    "/public",
+    "/src-capacitor",
+    "/src-cordova",
+    "/src-electron",
+    "/node_modules",
+    "/transfer.js",
+    "*.config.mjs",
+    "/quasar.config.*.temporary.compiled*"
+  ],
+  "globals": {
+    "ga": "readonly", // Google Analytics
+    "__statics": "readonly",
+    "process": "readonly",
+    "Capacitor": "readonly",
+    "chrome": "readonly"
+  },
+  "rules": {
+    // first parameter is always error level-> 0: off, 1: warn, 2: error
+    "no-tabs": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "space-before-function-paren": "off",
+    "semi": "off",
+    "no-useless-constructor": "off",
+    "no-use-before-define": "off",
+    "new-cap": "off",
+    //-----------------------------------
+    "no-extra-semi": "error",
+    "semi-spacing": "error",
+    "eqeqeq": "error",
+    "curly": "error",
+    "no-lonely-if": "error",
+    "no-multi-spaces": "error",
+    "space-before-blocks": "error",
+    "key-spacing": "error",
+    "space-infix-ops": "error",
+    //-----------------------------------
+    "no-void": [
+      "error",
+      {
+        "allowAsStatement": true
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "objectsInObjects": true
+      }
+    ],
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 1,
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+        "offsetTernaryExpressions": true
+      }
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    //-----------------------------------
+    "sort-imports-es6-autofix/sort-imports-es6": [
+      "error",
+      {
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "single",
+          "multiple"
+        ],
+        "ignoreCase": true
+      }
+    ],
+    //-----------------------------------
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    // "@typescript-eslint/type-annotation-spacing": "off",
+    //-----------------------------------
+    "@typescript-eslint/no-unused-vars": "warn",
+    //-----------------------------------
+    "@typescript-eslint/semi": "error",
+    "@typescript-eslint/no-useless-constructor": "error",
+    // "@typescript-eslint/no-use-before-define": "error",
+    //-----------------------------------
+    "@typescript-eslint/type-annotation-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true,
+        "overrides": {
+          "arrow": {
+            "before": true,
+            "after": true
+          }
+        }
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": [
+      "error",
+      {
+        "ignoreParameters": true,
+        "ignoreProperties": true
+      }
+    ],
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        "allowBoolean": true
+      }
+    ],
+    //-----------------------------------
+    "vue/html-indent": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/attribute-hyphenation": "off",
+    "vue/no-v-model-argument": "off",
+    "vue/max-attributes-per-line": "off",
+    //-----------------------------------
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ],
+    "vue/first-attribute-linebreak": [
+      "error",
+      {
+        "singleline": "beside",
+        "multiline": "beside"
+      }
+    ]
+  }
+}

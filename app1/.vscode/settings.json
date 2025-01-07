@@ -1,8 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
-  },
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
@@ -11,5 +8,12 @@
   "files.exclude": {
     "**/node_modules/**": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  }
 }

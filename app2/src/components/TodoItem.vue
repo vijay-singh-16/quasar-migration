@@ -1,11 +1,6 @@
 <script lang="ts">
 import CtrlBase from "./TodoItem.vue_";
-export default {
-	extends: CtrlBase,
-	emits: CtrlBase.emits,
-	setup: CtrlBase.setup,
-	components: {}
-};
+export default { ...CtrlBase };
 </script>
 
 <template>

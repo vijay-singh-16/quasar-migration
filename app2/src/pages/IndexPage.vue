@@ -1,14 +1,7 @@
 <script lang="ts">
 import CtrlBase from "./IndexPage.vue_";
 import TodoItem from "src/components/TodoItem.vue";
-export default {
-	extends: CtrlBase,
-	emits: CtrlBase.emits,
-	setup: CtrlBase.setup,
-	components: {
-		TodoItem
-	}
-};
+export default { ...CtrlBase, components: { TodoItem } };
 </script>
 
 <template>
